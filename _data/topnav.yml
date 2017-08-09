@@ -1,0 +1,83 @@
+## Topnav single links
+## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
+
+#Topnav dropdowns
+topnav_dropdowns:
+- title: Topnav dropdowns
+  folders:
+  - title: Capabilitites
+    output: web
+    url: /capabilities.html
+
+  - title: Codes
+    output: web
+    folderitems:
+
+    - title: Download
+      url: /download.html
+      output: web
+
+    - title: Release Notes
+      url: /release_notes.html
+      output: web
+
+    - title: License
+      url: /license.html
+      output: web
+
+  - title: Documentation
+    output: web
+    folderitems:
+
+    - title: Install Guide
+      url: /install_guide.html
+      output: web
+
+    - title: User guide
+      url: /user_guide.html
+      output: web
+
+    - title: Example Problems
+      url: /example_problems.html
+      output: web, pdf
+      submenus:
+
+        - title: Tabulated Examples
+          url: /tabulated_examples.html
+          output: web
+
+    - title: Publication
+      url: /publication.html
+      output: web
+
+  - title: Contributors
+    url: /contributors.html
+    output: web
+
+  - title: Mail lists
+    url: /contributors.html
+    output: web
+
+  - title: Developer pages
+    output: web
+    folderitems:
+
+    - title: Test Harness
+      url: /test_harness.html
+      output: web
+
+    - title: TH Instructions
+      url: /th_instructions.html
+      output: web
+
+    - title: Tips for Physical Edits
+      url: /tips_for_physical_edits.html
+      output: web
+
+  - title: Privacy and Security
+    url: /privacy_and_security.html
+    output: web
+
+
+
+
