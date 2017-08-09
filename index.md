@@ -1,39 +1,47 @@
 ---
-title: Mantevo Project
+title: Tramonto Project
 keywords: sample homepage
 tags: [getting_started]
 permalink: index.html
 ---
 
-Mantevo is a multi-faceted application performance project. 
-It provides application performance proxies known as _**miniapps**._ 
-Miniapps combine some or all of the dominant numerical kernels 
-contained in an actual stand-alone application. 
-Miniapps include libraries wrapped in a test driver providing representative inputs. 
-They may also be hard-coded to solve a particular test case so as to 
-simplify the need for parsing input files and mesh descriptions. 
-Mini apps range in scale from partial, performance-coupled components of the application 
-to a simplified representation of a complete execution path through the application.
+## Welcome to the Tramonto Home Page: Software for Nanostructured Fluids in Materials and Biology
 
-![Don't Codesign Without Them](images/DontCodesignWithoutThem.png)
+***
 
-Mantevo pioneered the concept of using miniapps as the central element in co-design efforts 
-for next-generation scalable computers and applications. 
-Mantevo received a 2013 R&D 100 award and an FLC Regional Technology Transfer award.
+### Project goals
 
-The Mantevo Project puts out annual releases of the Mantevo Miniapp Suite 
-prior to each US Supercomputing Conference in November.
+This project is based at Sandia National Laboratories, and is focused on developing molecular theory based computational tools for predicting the structure and properties of fluids at the nanoscale near surfaces and macromolecules. At this length scale fluids are inhomogeneous and common approximations for bulk fluids such as incompressibility do not apply. The specific capabilities of Tramonto and the related FasTram software packages are detailed in the Capability links to the left. In both cases, the molecular theories treated by the codes are fluid density functional theories (F-DFTs). These theories compute fluid structure near surfaces or as a result of self-assembly in contrast to quantum density functional theories (Q-DFTs) which are widely used to compute electronic structure of materials.
 
-## Mantevo Overview Paper
+### Applications of Fluids-DFTs
 
-[Improving Performance via Mini-applications (Mantevo Overview)](pdfs/MantevoOverview.pdf)
+Fluids Density Functional Theory approaches have been used to study a wide range of physical systems. Some examples are: fluids at interfaces, surface forces, colloidal fluids, wetting, porous media, capillary condensation, interfacial phase transitions, nucleation phenomena, freezing, self-assembly, lipid bilayers, ion channel proteins, solvation of surfaces and molecules. The characteristic particle size in F-DFT models ranges from atoms (e.g Argon) to colloidal particles, proteins, or cells. Thus these F-DFT approaches provide a multiscale framework for studying the physcis of many complex fluid systems. Some of these applications are represented in the publication list on the left, others may be found in a very diverse literature. The Tramonto code does not capture all of the F-DFT approaches that have been developed to date, but can be extended to new theories and models.
 
-## Mantevo Virtual Machine
+### Scientific Computing Approach.
 
-A [VirtualBox](https://www.virtualbox.org/) virtual machine preloaded with the proxy apps 
-featured at the SC12 Proxy App Tutorial is 
-[available for download](tutorial.html). 
-Using the virtual machine is perhaps the simplest way to try some of the Mantevo proxy apps 
-for the first time. VirtualBox runs on Linux, Mac, or Windows.
+For many years, application of F-DFTs to problems in inhomogeneous fluids was limited to systems with two dimensions of symmetry. In these special cases (fluids near planar surfaces, fluids in infinite cylindrical pores, etc), it is possible to perform the F-DFT integrals analytically in two dimensions while computational methods are needed to solve the problem in only one dimension. These 1D computational problems can can be performed on single processer computers using algorithms of limited sophistication (e.g. Picard iterative schemes). However, solving F-DFTs in problems with two or three computational dimensions quickly become very costly due to integral nature of the systems of equations. Simple iterative schemes are less satisfactory in these cases. Tramonto addresses the challenges of 2D and 3D systems with a combination of parallel computing and specialized linear solver algorithms that are coupled with a Newton's method approach where quadratic convergence is obtained. By utilizing the tools in the [Trilinos](http://trilinos.sandia.gov) framework, the solve of the F-DFT system of equations can also be coupled to a variety of engineering analysis tools such as arc-length continuation and optimization. These algorithms expand the utility of the software for engineering purposes such as rapid generation of phase diagrams and optimization of coarse-grained molecular models.
 
-![logo_rd100](images/logo_rd100.png)
+### Citing Tramonto
+
+Publications that refer to the Tramonto software or contain results computed from the Tramonto software should cite the URL for this web site as well appropriate original [publication(s)](publications.html).
+
+### Status of the Software
+
+Tramonto-4.0.1 was released in November 2011 under the Lesser Gnu Public Licence (click [here](http://www.gnu.org/copyleft/lgpl.html) for details). The complete release history of for the Tramonto software can be found [here](release_history.html), and a link to release notes is provided in the navigation bar. If a bug is found, or you require installation help contact the Tramonto development team at [tramonto-help@software.sandia.gov](mailto:tramonto-help@software.sandia.gov). General user inquiries should be directed to [tramonto-users@software.sandia.gov](mailto:tramonto-users@software.sandia.gov).
+
+### Acknowledgements
+
+The development of the Tramonto code has been funded by:
+
+*   The [Applied Mathematics Program](http://www.sc.doe.gov/ascr/Research/AppliedMath.html) of the Advanced Scientific Computing Research ([ASCR](http://www.sc.doe.gov/ascr/home.html)) Office at the Department of Energy.
+*   The Laboratory Directed Research and Development (LDRD) program at Sandia National Laboratories.
+
+### Related Links
+
+*   [Trilinos](http://trilinos.sandia.gov) parallel solver library.
+*   [LOCA](http://trilinos.sandia.gov/packages/nox) arc-length continuation package.
+*   [Sandia National Laboratories home page](http://www.sandia.gov/)
+
+***
+
+<a href="http://www.sandia.gov/general/privacy-security/index.html">Privacy and Security</a>

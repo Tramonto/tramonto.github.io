@@ -74,9 +74,6 @@ topnav_dropdowns:
       url: /tips_for_physical_edits.html
       output: web
 
-  - title: Privacy and Security
-    url: /privacy_and_security.html
-    output: web
 
 
 
