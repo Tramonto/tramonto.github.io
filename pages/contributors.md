@@ -1,6 +1,6 @@
 ---
-title: Capabilities
-permalink: capabilities.html
+title: Contributors
+permalink: contributors.html
 ---
 
 **Contributors to the Development of Tramonto**

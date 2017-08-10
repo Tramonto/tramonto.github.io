@@ -1,6 +1,6 @@
 ---
-title: Capabilities
-permalink: capabilities.html
+title: Mail lists
+permalink: mail_lists.html
 ---
 
 **Mail Lists**
