@@ -46,8 +46,8 @@ topnav_dropdowns:
           url: /tabulated_examples.html
           output: web
 
-    - title: Publication
-      url: /publication.html
+    - title: Publications
+      url: /publications.html
       output: web
 
   - title: Contributors
@@ -67,7 +67,7 @@ topnav_dropdowns:
       output: web
 
     - title: TH Instructions
-      url: /th_instructions.html
+      url: /test_harness_instructions.html
       output: web
 
     - title: Tips for Physical Edits

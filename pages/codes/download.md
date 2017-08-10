@@ -1,7 +1,7 @@
 ---
-title: Contributors
+title: Download
 folder: codes
-permalink: contributors.html
+permalink: download.html
 ---
 
 **Downloads - Release 4.0**
