@@ -9,7 +9,9 @@ permalink: contributors.html
 
 ## Contributors to the Development of Tramonto
 
-Tramonto has been developed as a collaborative project among experts in computational physicis and numerical methods. The contributors to Tramonto have training in different fields including engineering, physics, chemistry, computer science, and mathematics. This page lists staff, students, and contractors who have contributed significantly to the design and development of Tramonto.
+Tramonto has been developed as a collaborative project among experts in computational physicis and numerical methods. 
+The contributors to Tramonto have training in different fields including engineering, physics, chemistry, computer science, and mathematics. 
+This page lists staff, students, and contractors who have contributed significantly to the design and development of Tramonto.
 
 ## Physics Implementations and Applications
 

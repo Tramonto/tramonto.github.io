@@ -8,7 +8,8 @@ permalink: example_problems.html
 
 ***
 
-As of the Tramonto v5.0 release, there are 144 example problems that are distributed with the Tramonto software. These example problems collectively are called the test harness. 
+As of the Tramonto v5.0 release, there are 144 example problems that are distributed with the Tramonto software. 
+These example problems collectively are called the test harness. 
 The test harness is run regularly on multiple computational platforms with different processor counts to test the stability of the _development_ branch of Tramonto as new capabilities are introduced. 
 The status of the nightly tests can be found on the Tramonto [Developer/Test Harness](http://software.sandia.gov/tramonto/developer/test_harness/results/) page. 
 The Tramonto v5.0 release also includes a cmake and ctest capability that allows the user to automatically run example problems in order to test their installations or code changes. 
