@@ -37,7 +37,6 @@ Where LABEL is one of Sanity, Checkin, Continuous, Nightly, or Occasional, and N
 3.  Ascend back up to TRAMONTO_ROOT/test/harness/. Here you'll need to edit the file 'config' and add a section for your "run" of the test harness. See the existing runs in config for examples. The form of a run section is generally as follows:  
 
     RUN (the-name-of-your-run) {      
-      
         BUILD-LABEL = your-build-label;
         BUILD-DIR = the-name-to-use-for-the-build-directory;
         INVOKE-CONFIGURE = your-invoke-configure;
@@ -47,8 +46,7 @@ Where LABEL is one of Sanity, Checkin, Continuous, Nightly, or Occasional, and N
         MPI-PING = mpitask;
         MPI-STOP = lamhalt;
         TTR-DIR = /path/to/TramontoTestResults;
-        SSG-USERNAME = yourusername;
-        
+        SSG-USERNAME = yourusername;   
     }
 
 The build label is simply a label for identifying this build or type of build on the website. 

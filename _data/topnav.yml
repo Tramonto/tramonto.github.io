@@ -55,7 +55,7 @@ topnav_dropdowns:
     output: web
 
   - title: Mail lists
-    url: /contributors.html
+    url: /mail_lists.html
     output: web
 
   - title: Developer pages
