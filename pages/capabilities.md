@@ -7,19 +7,32 @@ permalink: capabilities.html
 
 ***
 
-This page contains information specific to Tramonto 4.0. Click the following links for capabilities of previous releases: [Capabilities: Tramonto v3.0/3.1](../Tramonto3.0_Web/tramonto3_0.html) or [Capabilities: Tramonto v2.1](../Tramonto2.1_Web/tramonto.html). For information on our previous work on FFT based DFT methods see the [FasTram](../FasTram_Web/fastram.html) page.
+This page contains information specific to Tramonto 4.0. 
+Click the following links for capabilities of previous releases: [Capabilities: Tramonto v3.0/3.1](../Tramonto3.0_Web/tramonto3_0.html) or [Capabilities: Tramonto v2.1](../Tramonto2.1_Web/tramonto.html). 
+For information on our previous work on FFT based DFT methods see the [FasTram](../FasTram_Web/fastram.html) page.
 
 # Summary
 
-Tramonto is a real space matrix based code that solves the integral equations of certain implemented density functional theories (DFTs) as described under _Physics Capabilities_ below. We have included original citations related to the various functionals. The specifics of our implementations can be found in papers on our [Publication](publications.html) list. The numerical methods used in Tramonto are based on a real space finite element approach discretized on a cartesian grid using Newton's method along with a variety of solver and numerical analysis tools found in the Trilinos software package. Certain features of the numerical methods that are particularly helpful for efficient calculation of large systems are listed here under _Solvers and Numerical Methods_. Tramonto can be compiled as a library and coupled with the [Towhee](http://towhee.sourceforge.net/) configurational bias Monte-Carlo (CBMC) code for use as an implicit solvent. Please vist the [People/Developers](snl_team.html) page for points of contact for the Tramonto software.
+Tramonto is a real space matrix based code that solves the integral equations of certain implemented density functional theories (DFTs) as described under _Physics Capabilities_ below. 
+We have included original citations related to the various functionals. 
+The specifics of our implementations can be found in papers on our [Publication](publications.html) list. 
+The numerical methods used in Tramonto are based on a real space finite element approach discretized on a cartesian grid using Newton's method along with a variety of solver and numerical analysis tools found in the Trilinos software package. 
+Certain features of the numerical methods that are particularly helpful for efficient calculation of large systems are listed here under _Solvers and Numerical Methods_. 
+Tramonto can be compiled as a library and coupled with the [Towhee](http://towhee.sourceforge.net/) configurational bias Monte-Carlo (CBMC) code for use as an implicit solvent. 
+Please visit the [People/Developers](snl_team.html) page for points of contact for the Tramonto software.
 
 ## WHAT'S NEW IN TRAMONTO 4.0
 
-The Tramonto 4.0 release delivers a cmake based build that is compatible with trilinos v10.x. It delivers new physics capabilities in the areas of electrostatics, hard sphere models, mean-field interaction models, and greatly expanded capabilities for treating surface geometries and surface-fluid interactions. Schur solvers for charged polymers have been implemented, and automated output for bulk mode and sum-rule analysis have be added. There are more than 130 Example problems included in the Tramonto 4.0 release, with the largest number of new examples in the area of 2D and 3D surface geometries. A variety of bug fixes have been implemented including corrected energy calculations for electrostatics systems.
+The Tramonto 4.0 release delivers a cmake based build that is compatible with trilinos v10.x. 
+It delivers new physics capabilities in the areas of electrostatics, hard sphere models, mean-field interaction models, and greatly expanded capabilities for treating surface geometries and surface-fluid interactions. 
+Schur solvers for charged polymers have been implemented, and automated output for bulk mode and sum-rule analysis have be added. 
+There are more than 130 Example problems included in the Tramonto 4.0 release, with the largest number of new examples in the area of 2D and 3D surface geometries. 
+A variety of bug fixes have been implemented including corrected energy calculations for electrostatics systems.
 
 ## TYPES OF CALCULATIONS THAT CAN BE DONE WITH TRAMONTO-4.0
 
-Density functional theories can be used in a wide variety of contexts. This list captures many categories of problems that may be tackled using the Tramonto software.
+Density functional theories can be used in a wide variety of contexts. 
+This list captures many categories of problems that may be tackled using the Tramonto software.
 
 *   Pure bulk fluids - state parameters.
 *   Fluid mixtures - state parameters.
@@ -36,12 +49,15 @@ Density functional theories can be used in a wide variety of contexts. This list
 
 ## ALGORITHMS FOR RAPID INVESTIGATION OF STATE SPACE WITH TRAMONTO
 
-The algorithms listed here are particularly helpful for rapid investigation of phase diagrams and state space. They are available to the Tramonto application by linking with the LOCA library found in the Trilinos solver package.
+The algorithms listed here are particularly helpful for rapid investigation of phase diagrams and state space. 
+They are available to the Tramonto application by linking with the LOCA library found in the Trilinos solver package.
 
 ## Continuation Algorithms
 
-*   Arc-length continuation: A feature of the LOCA library. Allows for continuation of any continuous parameter. Continuation around turning points is possible so that metastable and unstable branches may be explicitly computed.
-*   Domain size continuation: A feature of the Tramonto code that is useful for generating surfaces forces information (force vs. separation of surfaces). As a discontinous parameter it is not available for Arc-length continuation, but may be used in conjunction with Binodal tracking (see below) to compute phase diagrams of confined fluids.
+*   Arc-length continuation: A feature of the LOCA library. Allows for continuation of any continuous parameter. 
+Continuation around turning points is possible so that metastable and unstable branches may be explicitly computed.
+*   Domain size continuation: A feature of the Tramonto code that is useful for generating surfaces forces information (force vs. separation of surfaces). 
+As a discontinous parameter it is not available for Arc-length continuation, but may be used in conjunction with Binodal tracking (see below) to compute phase diagrams of confined fluids.
 
 ## Algorithms for Phase Diagrams
 
@@ -64,7 +80,8 @@ The algorithms listed here are particularly helpful for rapid investigation of p
 
 ## Functional Forms for Mean-Field Pair Interactions
 
-Pair interactions are included in the energy functional as a perturbation to the hard core interactions (defined by the FMT options above). In the strict mean field approach currently available in Tramonto, pair interactions are included in the energy functionals as F<sub>att</sub>=1/2∑<sub>i,j</sub>∫ ∫ ρ<sub>i</sub>(r)ρ<sub>j</sub>(r')u<sub>ij</sub>(r,r')dr dr'.
+Pair interactions are included in the energy functional as a perturbation to the hard core interactions (defined by the FMT options above). 
+In the strict mean field approach currently available in Tramonto, pair interactions are included in the energy functionals as F<sub>att</sub>=1/2∑<sub>i,j</sub>∫ ∫ ρ<sub>i</sub>(r)ρ<sub>j</sub>(r')u<sub>ij</sub>(r,r')dr dr'.
 
 In performing the numerical integrals associated with F<sub>att</sub>, it is necessary to select a method for treating the inner core region of the pair potential. Both the range of the inner core region and the way it will be treated must be defined. Implementations in Tramonto 4.0 include:
 
@@ -87,7 +104,8 @@ In performing the numerical integrals associated with F<sub>att</sub>, it is nec
     *   summed r<sup>n</sup> and Yukawa (_variable n_) potential
 *   Exponential potential, of the form u<sub>ij</sub> = -&epsilon<sub>ij</sub> exp[-(r-&sigma<sub>ij</sub>)/&alpha<sub>ij</sub>].
 *   Square-Well potential.
-*   Coulombic potentials can also be treated as pair interactions using a cut and shifted strict mean field approach. However, the coupled Poisson's approach is preferred for maintaining charge neutrality.
+*   Coulombic potentials can also be treated as pair interactions using a cut and shifted strict mean field approach. 
+However, the coupled Poisson's approach is preferred for maintaining charge neutrality.
 
 ## Bonded Systems
 
