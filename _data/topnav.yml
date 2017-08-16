@@ -29,8 +29,8 @@ topnav_dropdowns:
     output: web
     folderitems:
 
-    - title: Install Guide
-      url: /install_guide.html
+    - title: Installation Guides
+      url: /installation_guides.html
       output: web
 
     - title: User guide

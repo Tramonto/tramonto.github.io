@@ -93,7 +93,7 @@ In performing the numerical integrals associated with F<sub>att</sub>, it is nec
 
 ## Extended Non-Coulombic Potentials for use with Strict Mean Field Attractions
 
-<sub>ij</sub>
+These are the pair potentials, u<sub>ij</sub>, available in Tramonto4.0. All of these are intended to be used in addition to one of the hard-sphere FMT functionals, which must be chosen as a reference fluid.
 
 *   12-6 Lennard-Jones Fluids: attractions in a Weeks-Chandler-Anderson strict mean field perturbation approach.
 *   Yukawa Fluids: exponentially decaying attractive or repulsive interactions often used to model colloidal systems.  

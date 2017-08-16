@@ -8,12 +8,15 @@ permalink: release_notes.html
 
 ***
 
-Tramonto-5.0 is a major release delivered in October 2013\. It is recommended that all users upgrade to Tramonto 5.0\. New features and capabilities in Tramonto 5.0 include:
+Tramonto-5.0 is a major release delivered in October 2013\. It is recommended that all users upgrade to Tramonto 5.0\. 
+New features and capabilities in Tramonto 5.0 include:
 
 ### Software Features
 
-*   GUI (beta) - Tramonto 5.0 delivers a beta version of a GUI for Tramonto. The GUI is designed based on [Teuchos](http://trilinos.sandia.gov/packages/teuchos/) and [Optika](http://trilinos.sandia.gov/packages/optika/) classes and also requires the software [QT](http://qt-project.org/) to run. The version of the GUI included with Tramonto 5.0 is still being developed and refined, and we are seeking input from users who elect to try this beta software.
-*   ctest - new, comprehensive testing capabilities are available to users via ctest. All the example problems in the Tramonto repository are included in one or more of five testing categories. Those categories are based on runtimes as benchmarked on an 8-processor Mac OS X desktop machine with 2.66 GHz Quad-Core Intel Xenon processors and 16 GB of RAM. The specific ctest categories, the maximum individual runtimes, and the numbers of test in those categories are:
+*   GUI (beta) - Tramonto 5.0 delivers a beta version of a GUI for Tramonto. The GUI is designed based on [Teuchos](https://trilinos.github.io/teuchos.html) and [Optika](https://trilinos.github.io/optika.html) classes and also requires the software [QT](http://qt-project.org/) to run. 
+The version of the GUI included with Tramonto 5.0 is still being developed and refined, and we are seeking input from users who elect to try this beta software.
+*   ctest - new, comprehensive testing capabilities are available to users via ctest. All the example problems in the Tramonto repository are included in one or more of five testing categories. 
+Those categories are based on runtimes as benchmarked on an 8-processor Mac OS X desktop machine with 2.66 GHz Quad-Core Intel Xenon processors and 16 GB of RAM. The specific ctest categories, the maximum individual runtimes, and the numbers of test in those categories are:
     *   Sanity (30 sec :: 57 cases )
     *   Checkin (100 sec :: 89 cases)
     *   Continuous (600 sec :: 122 cases)

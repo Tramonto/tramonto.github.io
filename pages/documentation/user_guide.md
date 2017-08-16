@@ -34,7 +34,8 @@ The command needed to execute tramonto depends on the type of mpi libraries in u
 
 6. Finally modify the input file as needed to set up a calculation for a system of interest to you. Note that depending on the complexity of your problem you may need to use arc-length continuation algorithms to establish a suitable initial guess for your studies.
 
-7. If you need more information on the theories that have been implemented in the Tramonto software, please obtain a copy of the original references listed on the [Tramonto/capabilities](tramonto4.html) page. If you are interested in algorithms under the hood of Tramonto or would like to know about previous applications studied using the code, visit the [Publications](publications.html) page.
+7. If you need more information on the theories that have been implemented in the Tramonto software, please obtain a copy of the original references listed on the [Tramonto/capabilities](capabilities.html) page. 
+If you are interested in algorithms under the hood of Tramonto or would like to know about previous applications studied using the code, visit the [Publications](publications.html) page.
 
 ## User's Guide: Reduced units in the Tramonto Code
 

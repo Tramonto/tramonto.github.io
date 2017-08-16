@@ -1,7 +1,7 @@
 ---
-title: Install guide
+title: Installation guides
 folder: documentation
-permalink: install_guide.html
+permalink: installation_guides.html
 ---
 
 ## Installation Guide 
