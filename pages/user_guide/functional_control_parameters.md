@@ -109,3 +109,7 @@ These are switches that control the density functional equations being studied f
     *   3: WJDC: the modified iSAFT functional of Jain, Dominik, and Chapman (see J. Chem. Phys., 127:244904, 2007). This implementation treats both the densities and the effective fields as segment based variables explicitly. It may be used in conjunction with Schur solvers.
     *   4: WJDC2: variation of WJDC functional. This implementation treats the densities segment based variable but the effective field as a component (segment type) based variable. It may NOT be used in conjunction with Schur solvers.
     *   5: WJDC3: variation of WJDC functional. This implementation treats both the densities and the effective fields as component (segment type) based variables. It may be used in conjunction with Schur solvers, and is considered the optimal implementation of the WJDC functional from a performance perspective.
+    
+***
+
+<a href="http://www.sandia.gov/general/privacy-security/index.html">Privacy and Security</a>     

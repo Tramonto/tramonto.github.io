@@ -24,3 +24,7 @@ For more information on the details of dimensionless parameters in Tramonto calc
     *   -1 - set to the default value of κ=78.5
     *   >0 - set some other value for κ in the bulk fluid.
 *   **VEXT_MAX**(real): This parameter is always >0 and entered in kT units. This is the maximum external field, V<sub>ext</sub> where DFT equations will be solved. If V<sub>ext</sub>>VEXT_MAX then the fluid density is set strictly to zero. Note that in ideal systems, ρ(r)∝exp(-V<sub>ext</sub>(r)/kT). As a result, a large Vext value results in very small densities that can be difficult to resolve numerically. VEXT_MAX is typically between 10 and 20\.
+
+***
+
+<a href="http://www.sandia.gov/general/privacy-security/index.html">Privacy and Security</a> 

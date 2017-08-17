@@ -18,3 +18,7 @@ These parameters set the size and mesh spacing of the computational domain. They
     *   2: REFLECT: reflective boundary: beyond the last computational node, N, set ρ<sub>N+k</sub>=ρ<sub>N-k</sub>.
     *   3: LAST_NODE: continuation boundary: set ρ<sub>N+k</sub>=ρ<sub>N</sub>.
     *   4: LAST_NODE_RESTART: continuation boundary: set ρ<sub>N+k</sub>=ρ<sub>N</sub>, but use solution values obtained from a restart file for the last row. This can be useful for pinning a free interface.
+    
+***
+
+<a href="http://www.sandia.gov/general/privacy-security/index.html">Privacy and Security</a> 

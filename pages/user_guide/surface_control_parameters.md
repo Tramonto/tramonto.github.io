@@ -119,3 +119,7 @@ These parameters are used to set up the geometric parameters defining the surfac
     *   8: Pore of Finite Length: Yes
 *   **Angle_start**[Nwall_type](real vector): Vector to specify the angle (in degrees) from the appropriate origin where the surface should start. Must have entries for entire matrix even if ange cutouts will only be applied selectively.
 *   **Angle_end**[Nwall_type](real vector): Vector to specify the angle (in degrees) from the appropriate origin where the surface should end. Must have entries for entire matrix even if angle cutouts will only be applied selectively.
+
+***
+
+<a href="http://www.sandia.gov/general/privacy-security/index.html">Privacy and Security</a> 

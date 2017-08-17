@@ -124,3 +124,7 @@ These switches control the type of wall-fluid and wall-wall interaction potentia
     *   1: PAIR_COULOMB_CS: Cut and shifted Coulomb (note ... this is generally a bad idea - turn on Type_coul instead to preserve charge neutrality.
     *   2: PAIR_COULOMB: Full Coulomb potential used in forming integration stencils. (note ... this is still approximate and a bad idea - again turn on Type_coul instead to preserve charge neutrality.
     *   3: PAIR_YUKAWA_CS: Cut and shifted Yukawa potential (defined as in Egorov, Phys.Rev.E., v.70, p.031402, 2004).
+    
+***
+
+<a href="http://www.sandia.gov/general/privacy-security/index.html">Privacy and Security</a>     
