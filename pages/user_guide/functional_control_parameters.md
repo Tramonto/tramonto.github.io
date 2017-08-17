@@ -1,7 +1,7 @@
 ---
-title: Dimension Control Parameters
+title: Functional Control Parameters
 folder: user_guide
-permalink: dimension_control_parameters.html
+permalink: functional_control_parameters.html
 ---
 
 ## Functional Control Parameters
