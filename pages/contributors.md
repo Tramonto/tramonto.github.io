@@ -27,8 +27,8 @@ This page lists staff, students, and contractors who have contributed significan
 ## Solver Design and Algorithms
 
 *   [Mike Parks](mailto:mlparks@sandia.gov): Numerical methods Lead (2010-present)
-*   [Mike Heroux](mailto:maherou@sandia.gov): Numerical methods Lead 2005-2010 (also [Trilinos](http://trilinos.sandia.gov) P.I.)
-*   [Andrew Salinger](mailto:agsalin@sandia.gov): Numerical methods Lead 1996-2004 (also [LOCA](http://software.sandia.gov/nox) P.I.)
+*   [Mike Heroux](mailto:maherou@sandia.gov): Numerical methods Lead 2005-2010 (also [Trilinos](https://trilinos.github.io/) P.I.)
+*   [Andrew Salinger](mailto:agsalin@sandia.gov): Numerical methods Lead 1996-2004 (also [LOCA](https://trilinos.github.io/nox_and_loca.html) P.I.)
 
 ## Software Design/Delivery
 
