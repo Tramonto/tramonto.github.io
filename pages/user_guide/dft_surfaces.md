@@ -1,5 +1,5 @@
 ---
-title: Defining surface types, positions, and charge.
+title: Defining surface types, positions, and charge
 folder: user_guide
 permalink: dft_surfaces.html
 ---
