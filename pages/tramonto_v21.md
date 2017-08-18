@@ -1,13 +1,13 @@
 ---
-title: Tramonto 3.x User Guide
-permalink: tramonto_v3x_user_guide.html
+title: Tramonto 2.1 User Guide
+permalink: tramonto_v21_user_guide.html
 ---
 
 ## Quick start
 
-After completing installation, the following steps are recommended for the new user.
+To start using Tramonto we recommend that you take the following steps after installing the software:
 
-*   1\. Proceed to the directory Tramonto/Examples in your local copy of the software.*   2\. Choose an example that is similar to a problem you are interested in. For help selecting a suitable example problem to study, see the short descriptions on the [Tabulated Examples](http://software.sandia.gov/tramonto/src_docs/files.html) web page. Note that each example listed on the web site corresponds to an identically named directory in Tramonto/Examples. Within that directory all of the input files needed to run that particular case can be found.*   3\. Run the example problem of your choice, and study the output files produced by Tramonto (use links below to intepret output files). Note that when compiled, the executable (called 'dft') is placed in the directory Tramonto/build_directory/src where the build_directory is specified by the user (see the [Installation Guide](installation_guides.html) for further instructions). The command needed to execute tramonto depends on the type of mpi libraries in use. A few possibilities are :
+*   1\. Proceed to the directory Tramonto/Examples in your local copy of the software.*   2\. Choose an example that is similar to a problem you are interested in. For help selecting a suitable example problem to study, see the short descriptions on the [Tabulated Examples](http://software.sandia.gov/tramonto/src_docs/files.html) page.*   3\. Run the example problem of your choice, and study the output files produced by Tramonto (use links below to intepret output files). Note that when compiled, the executable (called 'dft') is placed in the directory Tramonto/build_directory/src where the build_directory is specified by the user (see the [Installation Guide](installation_guides.html) for further instructions). The command needed to execute tramonto depends on the type of mpi libraries in use. A few possibilities are :
     *   mpirun -np 16 ~/path_to_Tramonto/Tramonto/build_directory/src/dft
     *   mpirun -np 16 ~/path_to_Tramonto/Tramonto/build_directory/src/dft your_input.dat (replace dft_input.dat with a file name of your choice)
     *   mpiexec -n 16 ~/path_to_Tramonto/Tramonto/build_directory/src/dft
