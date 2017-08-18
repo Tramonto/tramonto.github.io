@@ -144,4 +144,4 @@ If you are having problems with the download process, please send an email to [t
 
 ***
 
-<a href="http://www.sandia.gov/general/privacy-security/index.html">Privacy and Security</a>   
+[Privacy and Security](http://www.sandia.gov/general/privacy-security/index.html)   

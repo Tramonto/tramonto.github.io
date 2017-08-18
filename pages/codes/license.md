@@ -26,4 +26,4 @@ This license and copyright applies to all files in the Tramonto directory struct
 
 ***
 
-<a href="http://www.sandia.gov/general/privacy-security/index.html">Privacy and Security</a>  
+[Privacy and Security](http://www.sandia.gov/general/privacy-security/index.html)  

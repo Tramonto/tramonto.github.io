@@ -148,4 +148,4 @@ Tramonto-3.0 is the second open source release of the Tramonto software complete
 
 ***
 
-<a href="http://www.sandia.gov/general/privacy-security/index.html">Privacy and Security</a>  
+[Privacy and Security](http://www.sandia.gov/general/privacy-security/index.html)  

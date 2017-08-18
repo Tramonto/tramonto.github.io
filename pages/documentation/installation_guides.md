@@ -12,8 +12,8 @@ This page contains instructions for building Tramonto 4.0\.
 Click the following links for archived build instructions: [Tramonto v3.x](Tramonto3.0_Web/installation_guide_3.html). 
 Click on a link below for printer-friendly Tramonto installation guides: 
 
-* [Tramonto v4.0](Tramonto4.0_Web/installation_guide_4_0.txt) 
-* [Tramonto v3.x](Tramonto3.0_Web/installation_guide_3.txt)
+* [Tramonto v4.0](pdfs/tramonto_4.0.txt) 
+* [Tramonto v3.x](pdfs/tramonto_3.x.txt)
 
 
     # Tramonto: A molecular theory code for structured and uniform fluids
@@ -358,5 +358,5 @@ Click on a link below for printer-friendly Tramonto installation guides:
 
 ***
 
-<a href="http://www.sandia.gov/general/privacy-security/index.html">Privacy and Security</a>  
+[Privacy and Security](http://www.sandia.gov/general/privacy-security/index.html)  
 

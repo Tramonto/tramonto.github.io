@@ -247,4 +247,4 @@ Source: JOURNAL OF CHEMICAL PHYSICS; AUG 15 1996; v.105, no.7, p.2884-2890</dd>
 
 ***
 
-<a href="http://www.sandia.gov/general/privacy-security/index.html">Privacy and Security</a>  
+[Privacy and Security](http://www.sandia.gov/general/privacy-security/index.html)  

@@ -68,6 +68,6 @@ You can also run individual components of the test harness separately. You will 
 
 ***
 
-<a href="http://www.sandia.gov/general/privacy-security/index.html">Privacy and Security</a>  
+[Privacy and Security](http://www.sandia.gov/general/privacy-security/index.html)  
 
 

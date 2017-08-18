@@ -27,4 +27,4 @@ For the new user we strongly recommend that you begin by running several test pr
 
 ***
 
-<a href="http://www.sandia.gov/general/privacy-security/index.html">Privacy and Security</a>  
+[Privacy and Security](http://www.sandia.gov/general/privacy-security/index.html)  

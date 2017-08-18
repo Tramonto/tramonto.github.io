@@ -73,4 +73,4 @@ Tramonto is a real space matrix based code that solves the integral equations of
 
 ***
 
-<a href="http://www.sandia.gov/general/privacy-security/index.html">Privacy and Security</a>  
+[Privacy and Security](http://www.sandia.gov/general/privacy-security/index.html)  

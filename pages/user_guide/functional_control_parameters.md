@@ -112,4 +112,5 @@ These are switches that control the density functional equations being studied f
     
 ***
 
-<a href="http://www.sandia.gov/general/privacy-security/index.html">Privacy and Security</a>     
+[Privacy and Security](http://www.sandia.gov/general/privacy-security/index.html)
+[Andrew Salinger](mailto:agsalin@sandia.gov) or [Laura Frink](mailto:ljfrink@colderinsights.com) - Site Contacts     

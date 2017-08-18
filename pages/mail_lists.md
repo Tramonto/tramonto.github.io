@@ -18,4 +18,4 @@ We recommend users subscribe to the following mail lists as appropriate.
   
 ***
 
-<a href="http://www.sandia.gov/general/privacy-security/index.html">Privacy and Security</a>    
+[Privacy and Security](http://www.sandia.gov/general/privacy-security/index.html)    

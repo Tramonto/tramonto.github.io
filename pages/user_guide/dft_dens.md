@@ -14,4 +14,5 @@ Note that there is a change in Tramonto v3.0 compared to Tramonto v2.1\. For the
 
 ***
 
-<a href="http://www.sandia.gov/general/privacy-security/index.html">Privacy and Security</a> 
+[Privacy and Security](http://www.sandia.gov/general/privacy-security/index.html)
+[Andrew Salinger](mailto:agsalin@sandia.gov) or [Laura Frink](mailto:ljfrink@colderinsights.com) - Site Contacts 
