@@ -1,37 +1,34 @@
 ---
-title: Physical Edits/Tips
-folder: developer_pages
-permalink: tips_for_physical_edits.html
+title: Developer physics
+permalink: developer_physics.html
 ---
 
-## Tramonto 4.x Tips for Making Physics Modifications in Tramonto
-
-This page contains information specific to Tramonto 4.0. Click the following links for information on previous releases: [: Tramonto v3.0/3.1](developer_physics.html)
-
-## Modifying Tramonto - v4.0
+## Modifying Tramonto
 
 There are several ways in which a user might want to modify the capabilities in Tramonto in order to study a particular problem of interest. This page is meant to provide basic instructions on what is involved for some common manipulations. For modifications not described here send e-mail to tramonto-help@software.sandia.gov for additional guidance. Modifications discussed here include:
 
-*   [New Arc-Length Continuation Parameters](developer_physics_4.html#CONT)
-*   [New External Field Potential (1D)](developer_physics_4.html#VEXT)
-*   [New Fluid Interaction Potential](developer_physics_4.html#ATT)
-*   [New FMT Hard-Sphere Functional](developer_physics_4.html#FMT)
-*   [New DFT with new Fields](developer_physics_4.html#NEWDFT)
-*   [New Integration Stencil](developer_physics_4.html#NEWSTENCIL)
+*   [New Arc-Length Continuation Parameters](developer_physics.html#CONT)
+*   [New External Field Potential (1D)](developer_physics.html#VEXT)
+*   [New Fluid Interaction Potential](developer_physics.html#ATT)
+*   [New FMT Hard-Sphere Functional](developer_physics.html#FMT)
+*   [New DFT with new Fields](developer_physics.html#NEWDFT)
+*   [New Integration Stencil](developer_physics.html#NEWSTENCIL)
 
 Note that any significant modification or addition of source code (*.c files) may require modification of header files (*.h files) and a new configure, in addition to a new compile. In these cases once your modifications are complete be sure to:
 
-1.  Either manually edit header files or run the [makeheaders](../makeheaders.html) utility (source code is included in Tramonto/Utilities) to ensure header files are current.
-2.  Add new files (new.c and/or new.h) to the lists in CMakeLists.txt
-3.  run cmake in the build directory.
+1.  Either manually edit header files or run "makeheaders" utility (source code in Tramonto/Utilities) to ensure header files are current.
+2.  Add new files (new.c and/or new.h) to the lists in Makefile.am.
+3.  Run ./bootstrap in the Tramonto/ directory.
+
+If you would like your modifications to be integrated with the Tramonto repository, send an e-mail to tramonto-developers@software.sandia.gov.
 
 <a name="CONT"></a>
 
 ### Implement a New Arc-Length Continuation Strategy
 
-All of the build-in continuation options distributed with Tramonto-4.x can be found in dft_switch_continuation.c. The numerical IDs associated with different continuation types are enumerated in dft_globals_const.h. The continuation IDs 0-10 are currently in use, but all of the continuation IDs 0-99 are reserved for the development of general methods. However, continuation may be performed in any combination of continous variables (for example varying densities of two components in a multicomponent system simultaneously). It is impossible to encode all of the possibilities apriori. Therefore a user plug-in space has been created for specialized implementations.
+These instructions are new for Tramonto-3.0, and do not apply for Tramonto2.1\. As of Tramonto 3.0, all of the algorithms associated with continuation have been fully separated from the physics code to make these extensions more straightforward. All of the built in continuation options can be found in dft_switch_continuation.c. The continuation IDs 0-99 have been reserved for built-in general methods. However, continuation may be performed in any combination of continous variables (for example varying densities of two components in a multicomponent system simultaneously). It is impossible to encode all of the possibilities apriori. Therefore as of Tramonto-3.0, the more general methods are separated from specialized implementations.
 
-Some specialized implementations are provided in the file dft_plugin_archived_continue.c (continuation IDs 100-199). These options have been used by the Sandia Tramonto team for specialized investigations, but are not general in nature. This file has the same structure as dft_switch_continue.c. For a user who would like to implement their own methods, an additional file (dft_plugin_user_continue.c) is provided. The continuation IDs for locally defined methods should be >199\. The routines that must be populated in order to perform continuation calculations are:
+Some specialized implementations are provided in the file dft_archived_continue.c (continuation IDs 100-199). These options have been used for specialized investigations, but are not general in nature. This file has the same structure as dft_switch_continue.c. It contains continuation options that will be archived by the Tramonto development team. For a user who would like to implement their own methods, dft_plugin_archived_continue.c may be used; however, an additional file is provided, dft_plugin_user_continue.c that can be populated locally for user specific purposes. In this case, the continuation ID should be >199\. The routines that must be populated in order to perform continuation calculations are:
 
 *   **double get_init_param_archived_plugin(int cont_type,int Loca_contID)**: returns the inital value of the parameter that will be varied.
 *   **void assign_param_user_plugin(int cont_type, int Loca_contID, double param)**: assigns the parameter during the course of a continuation run.
@@ -42,8 +39,8 @@ To implement a new continuation method, the following steps are required.
 
 1.  Choose an identifier for the new continuation method. Set it in dft_globals_const.h. Set up switches to reference the new identifier in the four routines in dft_plugin_user_continue.c.
 2.  Implement code to perform the four functions in dft_plugin_user_continue.c.
-3.  call functions to recalculate thermodynamics, stencils, or external fields if necessary. Note these functions are most likely already available so refer to the routine adjust_dep_params() found in dft_switch_continuation.c for reference.
-4.  adjust header files manually or run the makeheaders utility prior to rebuilding code.
+3.  call functions to recalculate thermodynamics, stencils, or external fields if necessary. Note these functions are most likely already available so refer to dft_switch_continuation.c and dft_archived_continue.c for reference
+4.  Run makeheaders prior to rebuilding code.
 
 Additional guidance on parameters can be found at the top of dft_plugin_user_continue.c.
 
@@ -53,32 +50,26 @@ Additional guidance on parameters can be found at the top of dft_plugin_user_con
 
 Changing the external field potential requires only small changes to the Tramonto source code.
 
-1.  Add a new 1D external field either in dft_vext_1D.c as a new function or in a new user generated file.
+1.  Add a new 1D external field either in dft_vext_1D.c as a new function or in a new user generated file. Note that for completeness both the field and its derivative are generally computed.
 2.  Assign a key word name and ID number to the new potential type in dft_globals_const.h or in a new user generated header file user.h. (as in #define NEW_VEXT_1D 8). When choosing the ID number respect existing external field types in dft_globals_const.h.
 3.  Add the new key word option to the switch statements in dft_switch_vext1D.c
-
-_Note: as of Tramonto 4.0, the external field derivatives are computed numerically rather than analytically to allow a more flexible application to complex compound surface geometries. Therefore it is not necessary to add code associated with external field derivatives._
 
 <a name="ATT"></a>
 
 ### Implement a New Fluid Interaction Potential
 
-Follow these instructions to implement a new interaction potential for pairwise fluid interactions or for defining an external field based on pairwise potentials.
+These instructions apply for pair potentials to be used in mean field perturbation calculations.
 
-1.  Create a new file to contain several functions associated with the new mean field pair potential. Any of the existing pair potential files (dft_pairPot__func_.c) can be used as as a template and for reference.
-2.  Identify the input parameters that should be used to compute this potential in case it will be used for fluid-fluid, fluid-wall, or wall-wall interactions.
-3.  Write functions to compute:
-
-    *   The value of pair potential.
-    *   The derivative of the pair potential.
-    *   The properties of the inner core for various treatments (e.g. weeks-chandler-anderson vs zero core potential).
-    *   The attractive part of the pair potential to be used in the DFT perturbation calculation.
-    *   The pair potential without any cut and shift applied.
-    *   The integral of the potential.
-4.  Assign a key word name and ID number to the new potential type in dft_globals_const.h or in a new user generated header file user.h. (as in #define NEW_PAIR_POT 10). When choosing the ID number respect existing pair potential types in dft_globals_const.h.
-5.  Add the new key word option to the switch statements in dft_switch_pairPot.c
-
-_Implementing all of the routines defined here automatically adds the new potential as an option for calculation of external fields based on the new pair potential._
+1.  Create a new file to contain several functions associated with the new mean field pair potential. Note that dft_pairPot_LJ12_6.c can be used as a template.
+2.  Write functions to define the new pair potential by computing the following:
+    *   The cut and shifted potential (see uLJ12_6_CS() for example).
+    *   The derivative of the new potential (see uLJ12_6_DERIV1D() for example).
+    *   The potential as a perturbation to a hard core potential (see uLJ12_6_ATT_CS() for example - where a Weeks-Chandler-Anderson split of the potential is used).
+    *   The potential without the cut and shift (see uLJ12_6_ATT_noCS() for example).
+    *   The integral of the potential (for example uLJ12_6_Integral() contains the integrated 12-6 Lennard-Jones potential).
+3.  Assign a key word name and ID number to the new potential type in dft_globals_const.h or in a new user generated header file user.h. (as in #define NEW_PAIR_POT 8). When choosing the ID number respect existing pair potential types in dft_globals_const.h.
+4.  Add the new key word option to the switch statements in dft_switch_pairPot.c
+5.  Note that implementing all of the routines defined here automatically adds the new potential as an option for calculations based on 3D external fields (either integrated potentials or atomic surfaces). The new interaction potential may be used to define surface-fluid and/or surface-surface interactions by setting Type_vext3D and/or Type_uwwPot to the new ID number in dft_input.dat.
 
 <a name="FMT"></a>
 
@@ -89,7 +80,6 @@ The implementation described here assumes that the new functional does not requi
 1.  Register the new type of FMT functional in the file dft_globals_const.h (or in a user supplied header file) with a new #define FMT_NEW statement. Be sure to respect existing defined options for the Type_func parameter.
 2.  Create a new file to contain essential physics for the new FMT functional (e.g. dft_physics_FMTnew.c).
 3.  Create functions in dft_physics_FMTnew.c to compute:
-
     *   the free energy density.
     *   the first derivative of the free energy denstiy with respect to nonlocal densities.
     *   the second derivatives of the free energy with respect to nonlocal densities. Note that the matrix fill logic implementation requires segregation of the second derivative calculations into two routines. The first should collect all terms that will be integrated over with a delta function weighting. The second should collect all terms that at will be integrated over with a step funtion (theta function) weighting.It may be helpful to study existing code in other dft_physics_FMT#.c files when doing the implementation.
@@ -126,15 +116,12 @@ The implementation described here assumes that the new functional does not requi
 5.  Add the new STENCIL_NEW case to all the switch routines found in dft_switch_stencil.c, and reference functions associated with the new integration stencil.
 6.  Create a new file (i.e. dft_stencil_type_range.c) to contain stencil specific routines.
 7.  Write new functions that define the new integration stencil. These functions set:
-
     *   the stencil range (radius).
     *   the stencil volume (which may or may not be known analytically).
     *   the order of the stencil (first order depends only on one component, 2nd order stencils depend on two components).
     *   the quadrature parameters used to compute the integration stencils.
     *   a local stencil weight given the square of the distance from the stencil origin.Note that it may be helpful to study source code in one or more of the routines dft_stencil_theta*.c or dft_stencil_delta*.c before writing the new functions associated with STENCIL_NEW.
-
+      
 ***
 
-<a href="http://www.sandia.gov/general/privacy-security/index.html">Privacy and Security</a>  
-
-
+<a href="http://www.sandia.gov/general/privacy-security/index.html">Privacy and Security</a>    
