@@ -17,7 +17,7 @@ For more details about the release, view the [release notes](../release_notes.ht
 <table class="currentTarballTable" cellspacing="0" cellpadding="0">
     <tr> 
       <td>file:</td> 
-      <td><a href="login.html?tid=tr401">Tramonto-4.0.1-Source.tar.gz</a></td>
+      <td><a href="download_files/Tramonto-4.0.1-Source.tar.gz">Tramonto-4.0.1-Source.tar.gz</a></td>
     </tr> 
     <tr> 
       <td>uploaded:</td> 
@@ -36,21 +36,13 @@ For more details about the release, view the [release notes](../release_notes.ht
       <td>518</td>
     </tr>
 </table>
-      
-To begin downloading Tramonto Release 4.0.1, click the "Download" button below:
-
-<div class="button">
-    <a href="login.html?tid=tr401">Download Tramonto Release 4.0.1</a>
-</div>
-
-To begin downloading Tramonto Release 4.0.1, click the "Download" button below:  
 
 **Old tarball:**
 
 <table class="currentTarballTable" cellspacing="0" cellpadding="0">
 <tr>
   <td>file:</td>
-  <td><a href="login.html?tid=tr40">Tramonto-4.0-Source.tar.gz</a></td>
+  <td><a href="download_files/Tramonto-4.0-Source.tar.gz">Tramonto-4.0-Source.tar.gz</a></td>
 </tr> 
 <tr>
   <td>uploaded: </td>
@@ -73,7 +65,7 @@ To begin downloading Tramonto Release 4.0.1, click the "Download" button below:
 <table class="currentTarballTable" cellspacing="0" cellpadding="0">
 <tr>
   <td>file:</td>
-  <td><a href="login.html?tid=tr31">tramonto-3.1.tar.gz</a></td>
+  <td><a href="download_files/Tramonto-3.1-Source.tar.gz">tramonto-3.1.tar.gz</a></td>
 </tr> 
 <tr>
   <td>uploaded: </td>
@@ -98,7 +90,7 @@ To begin downloading Tramonto Release 4.0.1, click the "Download" button below:
 <table class="currentTarballTable" cellspacing="0" cellpadding="0">
 <tr>
   <td>file:</td>
-  <td><a href="login.html?tid=tr30">tramonto-3.0.tar.gz</a></td>
+  <td><a href="download_files/Tramonto-3.0-Source.tar.gz">tramonto-3.0.tar.gz</a></td>
 </tr> 
 <tr>
   <td>uploaded: </td>
@@ -120,7 +112,7 @@ To begin downloading Tramonto Release 4.0.1, click the "Download" button below:
 <table class="currentTarballTable" cellspacing="0" cellpadding="0">
 <tr> 
   <td>file:</td> 
-  <td><a href="login.html?tid=tr21">tramonto-2.1.tar.gz</a></td>
+  <td><a href="download_files/Tramonto-2.1-Source.tar.gz">tramonto-2.1.tar.gz</a></td>
 </tr> 
 <tr> 
   <td>uploaded: </td> 
