@@ -39,9 +39,9 @@ This page lists staff, students, and contractors who have contributed significan
 ## Other University Collaborators
 
 *   [John Curro](mailto:jgcurro@unm.edu) (University of New Mexico and Sandia Labs) Polymer theory, PRISM and DFT.
-*   [John McCoy](http://infohost.nmt.edu/~cheme/ChE%20Faculty/mccoy.htm) New Mexico Tech
+*   [John McCoy](http://infohost.nmt.edu/~mccoy/) New Mexico Tech
 *   [Walter Chapman](http://www.ruf.rice.edu/~che/faculty/chapman/chapman.html) Rice University, Dept. of Chemical Engineering
-*   [Michael Mackay](http://www.mseg.udel.edu/research_faculty.html?fnid=72) University of Delaware, Materials Science & Engineering
+*   [Michael Mackay](http://www.ruf.rice.edu/~saft/chapman.htm) University of Delaware, Materials Science & Engineering
 *   [Arun Yethiraj](mailto:yethiraj@chem.wisc.edu) University of Wisconsin, Dept. of Chemistry
 
 ## Students and Post-Docs

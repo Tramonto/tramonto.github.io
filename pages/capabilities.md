@@ -19,7 +19,7 @@ The specifics of our implementations can be found in papers on our [Publication]
 The numerical methods used in Tramonto are based on a real space finite element approach discretized on a cartesian grid using Newton's method along with a variety of solver and numerical analysis tools found in the Trilinos software package. 
 Certain features of the numerical methods that are particularly helpful for efficient calculation of large systems are listed here under _Solvers and Numerical Methods_. 
 Tramonto can be compiled as a library and coupled with the [Towhee](http://towhee.sourceforge.net/) configurational bias Monte-Carlo (CBMC) code for use as an implicit solvent. 
-Please visit the [People/Developers](snl_team.html) page for points of contact for the Tramonto software.
+Please visit the [People/Developers](contributors.html) page for points of contact for the Tramonto software.
 
 ## WHAT'S NEW IN TRAMONTO 4.0
 
