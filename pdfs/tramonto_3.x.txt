@@ -42,9 +42,9 @@ Prerequisites:
         LAPACK                     http://www.netlib.org
         MPI                        http://www-unix.mcs.anl.gov/mpi/mpich2
                                    http://www.open-mpi.org
-        Trilinos (7.0.0 or later*) http://trilinos.sandia.gov
+        Trilinos* (8.0.8-10.12.2) https://trilinos.github.io/download-older.html
 
-    *The instructions below explain how to build with Trilinos 8.0.0 or later.
+    *Trilinos version 11 and later are incompatible with Tramonto.
 
     While BLAS, LAPACK and MPI could be available on your system, you will
     most likely have to build Trilinos yourself.  Trilinos contains several
@@ -52,7 +52,7 @@ Prerequisites:
     epetraext, epetra, loca, ml, nox, and teuchos.
 
     Trilinos has a webpage for new users available at
-    http://trilinos.sandia.gov/getting_started.html.
+    https://trilinos.github.io/getting_started.html.
     Below you will find a brief set of instructions that focus on building
     Trilinos for use with Tramonto.  If these instructions prove insufficient,
     please visit the website listed above.

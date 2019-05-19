@@ -6,7 +6,7 @@ permalink: loca_continuation_parameters.html
 
 ## LOCA Continuation Parameters
 
-These parameters define how LOCA continuation capabiliites will be used in a Tramonto calcualtion. Note that the [LOCA documentation](http://trilinos.sandia.gov/packages/nox/index.html) provides more details on the library, and its integration with the NOX nonlinear solvers. While NOX is not the default nonlinear solver for Tramonto as of the v4.0 release, it may be accessed if Tramonto is configured using the option --with-nox-loca.
+These parameters define how LOCA continuation capabiliites will be used in a Tramonto calcualtion. Note that the [LOCA documentation](https://trilinos.github.io/nox_and_loca_doxygen.html) provides more details on the library, and its integration with the NOX nonlinear solvers. While NOX is not the default nonlinear solver for Tramonto as of the v4.0 release, it may be accessed if Tramonto is configured using the option --with-nox-loca.
 
 *   **Continuation Method**(int): Several types of continuation may be performed using LOCA. The options available to Tramonto are:
     *   -1: None.
@@ -23,8 +23,8 @@ These parameters define how LOCA continuation capabiliites will be used in a Tra
 *   **Agressiveness**(real): A measure of how fast the algorithm will step along the continuation curve.
 *   **Continuation_Type2, NID_Cont, ID1, ID2**(int): For binodal calculations (method 4), this is the second parameter that is varied in order to keep the two systems at the same free energy. It can be any of the implemented continuation parameters in the code. For example, one might have a phase transition at a given chemical potential (Rho_b) and temperature, and the goal is to track the transition as a function of temperature. Then the temperature should be the first continuation variable, that will be increased or decreased as specified by the Step_size parameter. The chemical potential variable will be the second parameter, and it will be adjusted by the code as necessary in order to maintain the system at the phase transition.
 _One further note on continuation: It is possible to do mesh continuation in a binodal calculation. In that case, the N_steps parameter in this section should be set to 0, and mesh continuation will be handled in an outer loop outside the LOCA routines. This allows for some improved efficiency when generating phase transitions with mesh size as one of the parameters._
-    
+
 ***
 
 [Privacy and Security](http://www.sandia.gov/general/privacy-security/index.html)
-[Andrew Salinger](mailto:agsalin@sandia.gov) or [Laura Frink](mailto:ljfrink@colderinsights.com) - Site Contacts 
+[Andrew Salinger](mailto:agsalin@sandia.gov) or [Laura Frink](mailto:ljfrink@colderinsights.com) - Site Contacts
